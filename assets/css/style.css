@@ -1,0 +1,32 @@
+h1{
+    background-image: linear-gradient(to right, rgb(88, 34, 235), rgb(49, 0, 128));
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+label{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 790;
+    font-size: 25px;
+}
+
+.search-bar {  
+    position: relative;
+    top: 5px;
+    height: 30px;
+    width: 265px;
+}
+
+.search {
+    position: relative;
+    background: rgb(133, 125, 252);
+    top: 15px;
+    height: 30px;
+    width: 273px;
+    border-radius: 3px;
+    color: white;
+}
