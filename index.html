@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content="width=device-wdith, initial-scale=1.0"/>
+        <title>Today's Forecast</title>
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+    </head>
+    <body class = "min-100-vh flex-column">
+        <!-- Weather Dashboard header -->
+        <header class = "p-5 text-center text-white bg-primary">
+            <h1>Weather Dashboard</h1>
+        </header>
+        <div class = "container-fluid">
+            <div class = "row">
+                <div class = "col-12 col-md-3 col-xl-3 colOne">
+                    <label>Search for a City:</label>
+
+                    <div class = "input-group mb-3">
+                        <input type="text" class="form-control textVal" placeholder="San Diego">
+                        <div class ="input-group-append btnPar">
+                            <button class = "btn btn-primary search" type="button" id="button-addon2"><i class = "fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class = "cityHistory"></div>
+                </div>
+                <div class = "col-12 col-md-9 col-xl-9 colTwo">
+                    <div class = "todayForecast">
+                        <div class = "card bg-light" mb-3" style="max-width: 400px">
+                        <h2 class = "TodayCityName&Date"></h2>
+                    </div>
+                    <div class = "row weekForecast"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
