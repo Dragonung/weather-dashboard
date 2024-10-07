@@ -18,7 +18,7 @@
                     <label>Search for a City:</label>
 
                     <div class = "input-group mb-3">
-                        <input type="text" class="search-bar" placeholder="San Diego">
+                        <input type="text" class="search-bar searchkeyword" placeholder="San Diego">
                         <!-- Search button -->
                         <div class ="input-group-append btnPar">
                             <button class = "search" type="button" id="button-addon2">Search<i class = "fas fa-search"></i></button>
@@ -30,8 +30,11 @@
                 <!-- container for forecast for city & today's date -->
                 <div class = "col-12 col-md-9 col-xl-9 colTwo">
                     <div class = "todayForecast">
-                        <div class = "card bg-light" mb-3" style="max-width: 400px">
-                        <h2 class = "TodayCityName&Date"></h2>
+                        <div class = "card bg-light mb-3" style="max-width: 400px">
+                        <h2 class = "card-header cardTodayCityName"></h2>
+                        <h3 class = "card-header cardTodayDate"></h3>
+                        <img class = "icons"/>
+                        <div class = "card-body cardToday"></div>
                     </div>
                     <!-- container for 5-day forecast -->
                     <div class = "row weekForecast"></div>
@@ -39,5 +42,6 @@
                 </div>
             </div>
         </div>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>
