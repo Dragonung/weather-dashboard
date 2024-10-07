@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <meta charset = "UTF-8"/>
-        <meta name = "viewport" content="width=device-wdith, initial-scale=1.0"/>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Today's Forecast</title>
         <link rel="stylesheet" href="./assets/css/style.css"/>
     </head>
@@ -18,14 +18,14 @@
                     <label>Search for a City:</label>
 
                     <div class = "input-group mb-3">
-                        <input type="text" class="search-bar searchkeyword" placeholder="San Diego">
+                        <input type="text" class="form-control searchkeyword" placeholder="San Diego">
                         <!-- Search button -->
                         <div class ="input-group-append btnPar">
                             <button class = "search" type="button" id="button-addon2">Search<i class = "fas fa-search"></i></button>
                         </div>
                     </div> 
                     <!-- Search history -->
-                    <div class = "cityHistory"></div>
+                    <div class = "container cityHistory"></div>
                 </div>
                 <!-- container for forecast for city & today's date -->
                 <div class = "col-12 col-md-9 col-xl-9 colTwo">
@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
