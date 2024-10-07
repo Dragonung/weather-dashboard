@@ -1,11 +1,11 @@
 var APIkey = 'cfb525ff3512b1476203cdd6586b9e8b';
 var cityname = "San Jose";
 
-var date = moment().format('M/D/YYYY')
+var date = moment().format('M/D/YYYY');
 
 var cityHistory = [];
 //will keep text value of search and save it to an array, then local storage
-$('search').on("click", function (event) {
+$('.search').on("click", function (event) {
     event.preventDefault();
     city = $(this).parent('.btnPar').siblings('.searchkeyword').val().trim();
     if (city === "") {
@@ -19,6 +19,33 @@ $('search').on("click", function (event) {
     getWeatherToday();
 });
 
+//able to press buttons for previously searched cities
+var contHistEl = $('.cityHistory');
+function getHistory(){
+    contHistEl.empty();
+
+    for (let i=0; i < cityHistory.length; i++){
+
+        var rowEl = $('<row>');
+        var btnEl = $('<button>').text(`${cityHistory[i]}`)
+
+        rowEl.addClass('row histBtnRow');
+        btnEl.addClass('btn btn-ouline-secondary histBtn');
+        btnEl.attr('type', 'button');
+
+        contHistEl.prepend(rowEl);
+        rowEl.append(btnEl);
+    } if (!city){
+        return;
+    }
+    //allows buttons to search
+    $('.histBtn').on("click", function(event){
+        event.preventDefault();
+        city = $(this).text();
+        fiveForecastEl.empty();
+        getWeatherToday();
+    })
+}
 //Grabbing the 'Today' card body
 var cardToday = $('.Todaycard')
 //applying today's data weather data
@@ -50,7 +77,7 @@ function getWeatherToday() {
     FiveDayForecast();
 };
 
-var fiveForecastEl = $('.fiveForcast');
+var fiveForecastEl = $('.weekForcast');
 
 //applying the 5-day forecast below today's date data
 function FiveDayForecast() {
